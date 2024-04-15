@@ -39,3 +39,5 @@ getData(420, () => {
     getData(3);
   });
 });
+
+console.log("Hello World!");
