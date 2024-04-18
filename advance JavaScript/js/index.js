@@ -99,3 +99,46 @@ function sayMyName() {
 // const p2 = new Person("Arpit");
 
 // default binding
+
+// how prototyps work in JavaSript?
+
+class Person {
+  constructor(firstName, lastName) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+  }
+}
+
+// ProtiType in Classes
+Person.prototype.getFullName = function () {
+  return `${this.firstName} ${this.lastName}`;
+};
+
+const person1 = new Person("Arpit", "Mishra");
+const person2 = new Person("Rajesh", "Sharma");
+
+// person1.getFullName = function () {
+//   return `${this.firstName} ${this.lastName}`;
+// };
+
+// Using Prototype to make property available to all the instances.
+
+// console.log(person1.getFullName());
+// console.log(person2.getFullName());
+
+// ProtoType Inheritance in JavaScript
+
+function SuperHero(firstName, lastName, isHero) {
+  Person.call(this, firstName, lastName);
+  this.isHero = true;
+}
+
+SuperHero.prototype.fightCrime = function () {
+  console.log(`Fighting againt crime!`);
+  return 1;
+};
+
+const BatMan = new SuperHero();
+console.log(BatMan.isHero);
+console.log(BatMan.firstName);
+BatMan.fightCrime();
