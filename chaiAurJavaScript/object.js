@@ -105,3 +105,8 @@ const users = [
 // console.log(Object.entries(tinder)); // makes array of array of key value pair of objects.
 
 // console.log(tinder.hasOwnProperty("isLoggedIn")); to check if property exist in object
+
+// const obj = {};
+// if (obj) {
+//   console.log(`obj is empty`);
+// }
